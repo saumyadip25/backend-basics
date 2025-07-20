@@ -175,26 +175,6 @@ def demonstrate_lsp_compliance():
     print()
 
 
-def demonstrate_substitution():
-    """Show that objects can be substituted without breaking code"""
-    print("=== DEMONSTRATING SUBSTITUTION ===")
-    
-    def process_flying_bird(bird):
-        """This function works with ANY FlyingBird"""
-        return f"Processing: {bird.fly()}"
-    
-    # We can substitute any FlyingBird here
-    birds = [SparrowGood(), Eagle()]
-    
-    for bird in birds:
-        result = process_flying_bird(bird)
-        print(result)
-    
-    print("LSP Success: Any FlyingBird can be substituted!")
-    print()
-
-
 if __name__ == "__main__":
     demonstrate_lsp_violation()
     demonstrate_lsp_compliance()
-    demonstrate_substitution()
